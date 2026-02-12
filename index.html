@@ -476,10 +476,12 @@
         </p>
       </div>
 
-      <!-- Gallery Grid -->
+      <!-- Gallery Grid — 7 张图，3 列错落排布 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
 
-        <!-- Item 1 - Large -->
+        <!-- Row 1-2: 左侧大图 + 右侧两张小图 -->
+
+        <!-- 1. 高挑客廳（大图：占 2 列 2 行） -->
         <div class="reveal gallery-item relative overflow-hidden rounded-lg cursor-pointer group sm:col-span-2 lg:col-span-2 lg:row-span-2">
           <img src="img/img4.jpg" alt="豪華客廳設計" class="w-full h-[300px] sm:h-[400px] lg:h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -489,17 +491,17 @@
           </div>
         </div>
 
-        <!-- Item 2 -->
+        <!-- 2. 西班牙風格別墅 -->
         <div class="reveal reveal-delay-1 gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
-          <img src="img/img5.jpg" alt="現代廚房" class="w-full h-[250px] lg:h-[280px] object-cover">
+          <img src="img/img12.png" alt="西班牙風格別墅" class="w-full h-[250px] lg:h-[280px] object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-            <span class="text-brand-red-400 text-xs font-semibold uppercase tracking-wider">廚房翻新</span>
-            <h3 class="text-white text-lg font-bold mt-1">現代開放式廚房</h3>
+            <span class="text-brand-red-400 text-xs font-semibold uppercase tracking-wider">新建住宅</span>
+            <h3 class="text-white text-lg font-bold mt-1">地中海風格別墅</h3>
           </div>
         </div>
 
-        <!-- Item 3 -->
+        <!-- 3. 複式住宅 -->
         <div class="reveal reveal-delay-2 gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
           <img src="img/img6.jpg" alt="明亮客廳" class="w-full h-[250px] lg:h-[280px] object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -509,8 +511,20 @@
           </div>
         </div>
 
-        <!-- Item 4 -->
+        <!-- Row 3: 三張小圖並排 -->
+
+        <!-- 4. 現代廚房 -->
         <div class="reveal gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
+          <img src="img/img5.jpg" alt="現代廚房" class="w-full h-[250px] lg:h-[280px] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <span class="text-brand-red-400 text-xs font-semibold uppercase tracking-wider">廚房翻新</span>
+            <h3 class="text-white text-lg font-bold mt-1">現代開放式廚房</h3>
+          </div>
+        </div>
+
+        <!-- 5. 拱門設計 -->
+        <div class="reveal reveal-delay-1 gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
           <img src="img/img7.jpg" alt="法式客廳" class="w-full h-[250px] lg:h-[280px] object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -519,13 +533,25 @@
           </div>
         </div>
 
-        <!-- Item 5 -->
-        <div class="reveal reveal-delay-1 gallery-item relative overflow-hidden rounded-lg cursor-pointer group sm:col-span-2 lg:col-span-2">
+        <!-- 6. 開放客廳 -->
+        <div class="reveal reveal-delay-2 gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
           <img src="img/img8.jpg" alt="開放式客廳" class="w-full h-[250px] lg:h-[280px] object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
             <span class="text-brand-red-400 text-xs font-semibold uppercase tracking-wider">全屋裝修</span>
-            <h3 class="text-white text-lg font-bold mt-1">寬敞開放客廳 · 自然光充足</h3>
+            <h3 class="text-white text-lg font-bold mt-1">寬敞客廳 · 自然光充足</h3>
+          </div>
+        </div>
+
+        <!-- Row 4: 左側寬圖 + 右側小圖 -->
+
+        <!-- 7. 現代農舍風別墅（寬圖：占 2 列） -->
+        <div class="reveal gallery-item relative overflow-hidden rounded-lg cursor-pointer group sm:col-span-2 lg:col-span-2">
+          <img src="img/img13.jpg" alt="現代農舍風別墅" class="w-full h-[250px] lg:h-[320px] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <span class="text-brand-red-400 text-xs font-semibold uppercase tracking-wider">新建住宅</span>
+            <h3 class="text-white text-xl font-bold mt-1">現代農舍風 · 雙車庫獨棟</h3>
           </div>
         </div>
 
