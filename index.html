@@ -14,6 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome (現成圖標庫) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
   <!-- Tailwind Config -->
   <script>
     tailwind.config = {
@@ -370,7 +373,18 @@
       <!-- Service Cards Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
-        <!-- Card 1: 土地開發 -->
+        <!-- Card 1: 現金收房 (Font Awesome 鈔票圖標) -->
+        <div class="reveal service-card bg-navy-900/80 border border-white/10 hover:border-brand-red-500/30 rounded-md p-8 text-center group">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-lg bg-brand-red-500/10 border border-brand-red-500/20 flex items-center justify-center group-hover:bg-brand-red-500/20 transition-colors duration-300">
+            <i class="fa-solid fa-money-bill-wave text-brand-red-500 text-3xl" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-white text-xl font-bold mb-3">現金收房</h3>
+          <p class="text-white/50 text-sm leading-relaxed">
+            現金收購房屋、土地，手續簡便、快速成交。無需等待貸款審批，誠意收購老舊房屋與土地。
+          </p>
+        </div>
+
+        <!-- Card 2: 土地開發 -->
         <div class="reveal service-card bg-navy-900/80 border border-white/10 hover:border-brand-red-500/30 rounded-md p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 rounded-lg bg-brand-red-500/10 border border-brand-red-500/20 flex items-center justify-center group-hover:bg-brand-red-500/20 transition-colors duration-300">
             <svg class="w-8 h-8 text-brand-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
@@ -379,11 +393,11 @@
           </div>
           <h3 class="text-white text-xl font-bold mb-3">土地開發</h3>
           <p class="text-white/50 text-sm leading-relaxed">
-            長期現金收購土地、老舊房屋，並可多種形式合作開發。把每一塊土地，變成真正有價值的資產。
+            從地塊評估、規劃報批到合建興建，一站式協助您盤活土地。可合作開發、分割興建，熟悉法規與流程，讓土地發揮最大效益。
           </p>
         </div>
 
-        <!-- Card 2: 建房服務 -->
+        <!-- Card 3: 建房服務 -->
         <div class="reveal reveal-delay-1 service-card bg-navy-900/80 border border-white/10 hover:border-brand-red-500/30 rounded-md p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 rounded-lg bg-brand-red-500/10 border border-brand-red-500/20 flex items-center justify-center group-hover:bg-brand-red-500/20 transition-colors duration-300">
             <svg class="w-8 h-8 text-brand-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
@@ -396,7 +410,7 @@
           </p>
         </div>
 
-        <!-- Card 3: 裝修服務 -->
+        <!-- Card 4: 裝修服務 -->
         <div class="reveal reveal-delay-2 service-card bg-navy-900/80 border border-white/10 hover:border-brand-red-500/30 rounded-md p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 rounded-lg bg-brand-red-500/10 border border-brand-red-500/20 flex items-center justify-center group-hover:bg-brand-red-500/20 transition-colors duration-300">
             <svg class="w-8 h-8 text-brand-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
@@ -409,12 +423,10 @@
           </p>
         </div>
 
-        <!-- Card 4: 維修服務 -->
+        <!-- Card 5: 維修服務 (Font Awesome 扳手圖標) -->
         <div class="reveal reveal-delay-1 service-card bg-navy-900/80 border border-white/10 hover:border-brand-red-500/30 rounded-md p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 rounded-lg bg-brand-red-500/10 border border-brand-red-500/20 flex items-center justify-center group-hover:bg-brand-red-500/20 transition-colors duration-300">
-            <svg class="w-8 h-8 text-brand-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.25 5.25a2.121 2.121 0 01-3-3l5.25-5.25m0 0l2.122-2.122M11.42 15.17l2.122-2.122m-2.122 2.122l4.93 4.93a2.121 2.121 0 003-3l-4.93-4.93m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+            <i class="fa-solid fa-wrench text-brand-red-500 text-3xl" aria-hidden="true"></i>
           </div>
           <h3 class="text-white text-xl font-bold mb-3">維修服務</h3>
           <p class="text-white/50 text-sm leading-relaxed">
@@ -422,8 +434,8 @@
           </p>
         </div>
 
-        <!-- Card 5: ADU 建設 -->
-        <div class="reveal reveal-delay-2 service-card bg-navy-900/80 border border-white/10 hover:border-brand-red-500/30 rounded-md p-8 text-center group sm:col-span-2 lg:col-span-1">
+        <!-- Card 6: ADU 建設 -->
+        <div class="reveal reveal-delay-2 service-card bg-navy-900/80 border border-white/10 hover:border-brand-red-500/30 rounded-md p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 rounded-lg bg-brand-red-500/10 border border-brand-red-500/20 flex items-center justify-center group-hover:bg-brand-red-500/20 transition-colors duration-300">
             <svg class="w-8 h-8 text-brand-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/>
@@ -609,7 +621,7 @@
           </button>
           <div class="faq-answer">
             <div class="px-6 pb-6 text-white/70 leading-relaxed">
-              我們主要服務<strong class="text-white">南加州地區</strong>，包括 Arcadia、San Gabriel Valley 及周邊城市。如有其他地區的需求，歡迎來電諮詢。
+              我們主要服務<strong class="text-white">南加州地區</strong>，包括 Greater Los Angeles Area及周邊城市。如有其他地區的需求，歡迎來電諮詢。
             </div>
           </div>
         </div>
@@ -667,12 +679,21 @@
         </div>
       </div>
 
-      <!-- WeChat QR Code -->
-      <div class="reveal mt-16 text-center">
-        <div class="inline-block bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-all duration-300">
-          <img src="img/img9.jpg" alt="微信二維碼" class="w-48 h-48 mx-auto rounded-md">
+      <!-- WeChat QR Codes -->
+      <div class="reveal mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 lg:gap-12">
+        <div class="text-center bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-all duration-300">
+          <div class="w-48 h-48 mx-auto rounded-md overflow-hidden flex items-center justify-center bg-white">
+            <img src="img/img9.jpg" alt="微信二維碼" class="w-full h-full object-contain">
+          </div>
           <p class="text-navy-900 font-bold mt-4">掃碼添加微信</p>
           <p class="text-gray-500 text-sm mt-1">快速獲取免費諮詢</p>
+        </div>
+        <div class="text-center bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-all duration-300">
+          <div class="w-48 h-48 mx-auto rounded-md overflow-hidden flex items-center justify-center bg-white">
+            <img src="img/wechat_2.jpg" alt="微信二維碼 Jack" class="w-full h-full object-contain">
+          </div>
+          <p class="text-navy-900 font-bold mt-4">Jack</p>
+          <p class="text-gray-500 text-sm mt-1">掃碼添加為好友</p>
         </div>
       </div>
 
@@ -700,6 +721,7 @@
         <div>
           <h4 class="text-white font-bold text-base mb-4">服務項目</h4>
           <ul class="space-y-2.5">
+            <li><a href="#services" class="text-white/45 hover:text-brand-red-500 text-sm transition-colors duration-200">現金收房</a></li>
             <li><a href="#services" class="text-white/45 hover:text-brand-red-500 text-sm transition-colors duration-200">土地開發</a></li>
             <li><a href="#services" class="text-white/45 hover:text-brand-red-500 text-sm transition-colors duration-200">建房服務 (New Construction)</a></li>
             <li><a href="#services" class="text-white/45 hover:text-brand-red-500 text-sm transition-colors duration-200">裝修翻新 (Remodeling)</a></li>
@@ -729,7 +751,7 @@
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-4 h-4 text-brand-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-              <span class="text-white/45 text-sm break-all">xiangchenLI889@gmail.com</span>
+              <span class="text-white/45 text-sm break-all">xiangchenLi889@gmail.com</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-4 h-4 text-brand-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
