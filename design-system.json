@@ -1,0 +1,649 @@
+{
+  "$schema": "Design System v1.0",
+  "$description": "从建筑公司网站截图中提取的完整设计语言系统，用于在整个项目中严格复刻相同的高级质感。",
+
+  "styleIdentity": {
+    "name": "Corporate Dark Authority",
+    "description": "以深邃海军蓝为主调的企业级专业风格，搭配活力橙色强调色。整体传达出建筑行业的稳重、专业与力量感。属于 'Dark Corporate Premium' 范畴——不是极简主义，也不是 brutalist，而是一种兼具现代感与权威感的商务暗色系设计。",
+    "keywords": ["dark-corporate", "professional", "authoritative", "bold-contrast", "construction-grade", "premium-business"],
+    "moodboard": "摩天大楼夜景 + 钢铁质感 + 金属橙色灯光 + 深蓝天幕",
+    "designPrinciples": [
+      "高对比度：深色背景 + 亮色文字/强调色，营造强烈视觉冲击",
+      "层次分明：通过明暗交替的 section 划分内容层级",
+      "专业权威：粗壮的大写标题 + 稳健的布局传达行业实力",
+      "橙色点睛：在关键位置使用橙色高亮，引导视觉焦点",
+      "图文并茂：大量使用高质量建筑摄影配合文字说明"
+    ]
+  },
+
+  "colors": {
+    "palette": {
+      "primary": {
+        "50": "#F0F4FF",
+        "100": "#E0E8F5",
+        "200": "#B8C9E8",
+        "300": "#7A95C4",
+        "400": "#4A6899",
+        "500": "#1E3A6E",
+        "600": "#152D5B",
+        "700": "#0F2148",
+        "800": "#0B1829",
+        "900": "#080F1C",
+        "950": "#050A14",
+        "DEFAULT": "#0B1829",
+        "tailwind": "bg-[#0B1829]",
+        "usage": "主背景色、导航栏、Hero 区域、服务卡片背景、Footer 背景"
+      },
+      "secondary": {
+        "50": "#FFF7ED",
+        "100": "#FFEDD5",
+        "200": "#FED7AA",
+        "300": "#FDBA74",
+        "400": "#FB923C",
+        "500": "#F97316",
+        "600": "#EA580C",
+        "700": "#C2410C",
+        "800": "#9A3412",
+        "900": "#7C2D12",
+        "950": "#431407",
+        "DEFAULT": "#F97316",
+        "tailwind": "bg-orange-500",
+        "usage": "CTA 按钮、文字高亮背景、图标强调、边框强调、hover 状态"
+      },
+      "accent": {
+        "gold": "#D4A843",
+        "goldLight": "#E8C96A",
+        "tailwind": "bg-[#D4A843]",
+        "usage": "服务卡片边框、特殊装饰元素、图标颜色"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "50": "#F8FAFC",
+        "100": "#F1F5F9",
+        "200": "#E2E8F0",
+        "300": "#CBD5E1",
+        "400": "#94A3B8",
+        "500": "#64748B",
+        "600": "#475569",
+        "700": "#334155",
+        "800": "#1E293B",
+        "900": "#0F172A",
+        "950": "#020617",
+        "usage": "浅色 section 背景、分割线、次要文字、表单背景"
+      },
+      "semantic": {
+        "success": {
+          "DEFAULT": "#22C55E",
+          "light": "#BBF7D0",
+          "dark": "#15803D",
+          "tailwind": "text-green-500"
+        },
+        "error": {
+          "DEFAULT": "#EF4444",
+          "light": "#FECACA",
+          "dark": "#B91C1C",
+          "tailwind": "text-red-500"
+        },
+        "warning": {
+          "DEFAULT": "#F59E0B",
+          "light": "#FEF3C7",
+          "dark": "#B45309",
+          "tailwind": "text-amber-500"
+        },
+        "info": {
+          "DEFAULT": "#3B82F6",
+          "light": "#DBEAFE",
+          "dark": "#1D4ED8",
+          "tailwind": "text-blue-500"
+        }
+      }
+    },
+    "gradients": {
+      "heroOverlay": "bg-gradient-to-r from-[#0B1829]/90 via-[#0B1829]/70 to-transparent",
+      "heroOverlayAlt": "bg-gradient-to-t from-[#0B1829] via-[#0B1829]/60 to-transparent",
+      "cardOverlay": "bg-gradient-to-t from-[#0B1829]/90 via-[#0B1829]/40 to-transparent",
+      "ctaBackground": "bg-gradient-to-r from-[#0B1829] to-[#152D5B]",
+      "orangeGlow": "bg-gradient-to-r from-[#EA580C] to-[#F97316]",
+      "darkFade": "bg-gradient-to-b from-[#0B1829] to-[#050A14]"
+    },
+    "sectionBackgrounds": {
+      "hero": "#0B1829 with image overlay",
+      "services": "#FFFFFF (white)",
+      "valueProposition": "#F8FAFC (light gray)",
+      "featuredProjects": "#FFFFFF (white)",
+      "customers": "#F8FAFC (light gray)",
+      "cta": "#0B1829 (dark navy with image)",
+      "footer": "#080F1C (deepest dark)"
+    }
+  },
+
+  "typography": {
+    "fontFamilies": {
+      "heading": {
+        "family": "'DM Serif Display', 'Playfair Display', Georgia, 'Times New Roman', serif",
+        "tailwind": "font-serif",
+        "usage": "Hero 大标题、章节标题中的普通字重部分",
+        "note": "截图中 Hero 标题为粗壮的大写衬线体，具有强烈的权威感"
+      },
+      "body": {
+        "family": "'Inter', 'Open Sans', 'Segoe UI', system-ui, -apple-system, sans-serif",
+        "tailwind": "font-sans",
+        "usage": "导航、正文、按钮、表单、卡片描述"
+      },
+      "accent": {
+        "family": "'Poppins', 'Montserrat', sans-serif",
+        "tailwind": "font-sans",
+        "usage": "章节标题中的高亮关键词、服务名称"
+      }
+    },
+    "scale": {
+      "hero": {
+        "size": "clamp(2.5rem, 5vw, 4.5rem)",
+        "tailwindClass": "text-4xl md:text-5xl lg:text-6xl xl:text-7xl",
+        "weight": "800",
+        "tailwindWeight": "font-extrabold",
+        "lineHeight": "1.1",
+        "letterSpacing": "0.02em",
+        "textTransform": "uppercase",
+        "additionalClasses": "uppercase tracking-wide leading-tight"
+      },
+      "h1": {
+        "size": "2.5rem (40px)",
+        "tailwindClass": "text-4xl lg:text-5xl",
+        "weight": "700",
+        "tailwindWeight": "font-bold",
+        "lineHeight": "1.2",
+        "letterSpacing": "0.01em"
+      },
+      "h2": {
+        "size": "2rem (32px)",
+        "tailwindClass": "text-3xl lg:text-4xl",
+        "weight": "700",
+        "tailwindWeight": "font-bold",
+        "lineHeight": "1.25",
+        "letterSpacing": "0",
+        "note": "章节标题如 'Our Services'，其中关键词用橙色背景高亮"
+      },
+      "h3": {
+        "size": "1.5rem (24px)",
+        "tailwindClass": "text-2xl",
+        "weight": "700",
+        "tailwindWeight": "font-bold",
+        "lineHeight": "1.3",
+        "letterSpacing": "0"
+      },
+      "h4": {
+        "size": "1.25rem (20px)",
+        "tailwindClass": "text-xl",
+        "weight": "600",
+        "tailwindWeight": "font-semibold",
+        "lineHeight": "1.4",
+        "letterSpacing": "0"
+      },
+      "h5": {
+        "size": "1.125rem (18px)",
+        "tailwindClass": "text-lg",
+        "weight": "600",
+        "tailwindWeight": "font-semibold",
+        "lineHeight": "1.4"
+      },
+      "h6": {
+        "size": "1rem (16px)",
+        "tailwindClass": "text-base",
+        "weight": "600",
+        "tailwindWeight": "font-semibold",
+        "lineHeight": "1.5"
+      },
+      "subtitle": {
+        "size": "1.125rem (18px)",
+        "tailwindClass": "text-lg",
+        "weight": "400",
+        "tailwindWeight": "font-normal",
+        "lineHeight": "1.6",
+        "color": "text-neutral-400 (在深色背景) / text-neutral-600 (在浅色背景)"
+      },
+      "body": {
+        "size": "1rem (16px)",
+        "tailwindClass": "text-base",
+        "weight": "400",
+        "tailwindWeight": "font-normal",
+        "lineHeight": "1.7",
+        "letterSpacing": "0",
+        "color": "text-white/80 (在深色背景) / text-neutral-700 (在浅色背景)"
+      },
+      "bodySmall": {
+        "size": "0.875rem (14px)",
+        "tailwindClass": "text-sm",
+        "weight": "400",
+        "tailwindWeight": "font-normal",
+        "lineHeight": "1.6"
+      },
+      "caption": {
+        "size": "0.75rem (12px)",
+        "tailwindClass": "text-xs",
+        "weight": "400",
+        "tailwindWeight": "font-normal",
+        "lineHeight": "1.5",
+        "letterSpacing": "0.02em"
+      },
+      "overline": {
+        "size": "0.75rem (12px)",
+        "tailwindClass": "text-xs",
+        "weight": "600",
+        "tailwindWeight": "font-semibold",
+        "lineHeight": "1.5",
+        "letterSpacing": "0.1em",
+        "textTransform": "uppercase",
+        "additionalClasses": "uppercase tracking-widest"
+      },
+      "button": {
+        "size": "0.875rem (14px)",
+        "tailwindClass": "text-sm",
+        "weight": "600",
+        "tailwindWeight": "font-semibold",
+        "lineHeight": "1",
+        "letterSpacing": "0.02em"
+      },
+      "nav": {
+        "size": "0.9375rem (15px)",
+        "tailwindClass": "text-[15px]",
+        "weight": "500",
+        "tailwindWeight": "font-medium",
+        "lineHeight": "1",
+        "letterSpacing": "0.01em"
+      }
+    }
+  },
+
+  "borderRadius": {
+    "none": "0px — rounded-none",
+    "xs": "2px — rounded-[2px]（高亮文字标签）",
+    "sm": "4px — rounded-sm（按钮、小元素）",
+    "md": "6px — rounded-md（卡片、输入框）",
+    "lg": "8px — rounded-lg（大卡片、图片容器）",
+    "xl": "12px — rounded-xl（模态框、大容器）",
+    "2xl": "16px — rounded-2xl",
+    "pill": "9999px — rounded-full（标签、头像）",
+    "defaults": {
+      "button": "rounded-sm (4px)",
+      "card": "rounded-md (6px)",
+      "input": "rounded-sm (4px)",
+      "image": "rounded-lg (8px)",
+      "badge": "rounded-[2px]",
+      "avatar": "rounded-full"
+    }
+  },
+
+  "shadows": {
+    "sm": {
+      "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "tailwind": "shadow-sm",
+      "usage": "导航栏、小元素"
+    },
+    "md": {
+      "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)",
+      "tailwind": "shadow-md",
+      "usage": "服务卡片、项目卡片 hover 状态"
+    },
+    "lg": {
+      "value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
+      "tailwind": "shadow-lg",
+      "usage": "弹出菜单、下拉框"
+    },
+    "xl": {
+      "value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+      "tailwind": "shadow-xl",
+      "usage": "模态框、浮动卡片"
+    },
+    "inner": {
+      "value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+      "tailwind": "shadow-inner",
+      "usage": "输入框 focus 状态"
+    },
+    "colored": {
+      "orange": "0 4px 14px 0 rgba(249, 115, 22, 0.3)",
+      "tailwind": "shadow-[0_4px_14px_0_rgba(249,115,22,0.3)]",
+      "usage": "橙色按钮 hover 状态的光晕效果"
+    },
+    "dark": {
+      "value": "0 4px 20px 0 rgba(0, 0, 0, 0.4)",
+      "tailwind": "shadow-[0_4px_20px_0_rgba(0,0,0,0.4)]",
+      "usage": "深色区域内的卡片"
+    },
+    "cardOnDark": {
+      "value": "0 0 0 1px rgba(212, 168, 67, 0.2), 0 4px 12px rgba(0, 0, 0, 0.3)",
+      "tailwind": "shadow-[0_0_0_1px_rgba(212,168,67,0.2),0_4px_12px_rgba(0,0,0,0.3)]",
+      "usage": "深色背景上的服务卡片（微妙金边 + 阴影）"
+    }
+  },
+
+  "spacing": {
+    "base": "4px",
+    "scale": {
+      "0": "0px",
+      "0.5": "2px",
+      "1": "4px",
+      "1.5": "6px",
+      "2": "8px",
+      "2.5": "10px",
+      "3": "12px",
+      "4": "16px",
+      "5": "20px",
+      "6": "24px",
+      "7": "28px",
+      "8": "32px",
+      "9": "36px",
+      "10": "40px",
+      "12": "48px",
+      "14": "56px",
+      "16": "64px",
+      "20": "80px",
+      "24": "96px",
+      "28": "112px",
+      "32": "128px"
+    },
+    "usage": {
+      "sectionPaddingY": "py-16 md:py-20 lg:py-24 (64px → 96px)",
+      "sectionPaddingX": "px-4 md:px-8 lg:px-16 (16px → 64px)",
+      "containerMaxWidth": "max-w-7xl mx-auto (1280px)",
+      "cardPadding": "p-6 lg:p-8 (24px → 32px)",
+      "cardGap": "gap-6 lg:gap-8 (24px → 32px)",
+      "elementGapSm": "gap-2 (8px)",
+      "elementGapMd": "gap-4 (16px)",
+      "elementGapLg": "gap-6 (24px)",
+      "navItemGap": "gap-6 lg:gap-8 (24px → 32px)",
+      "inputPadding": "px-4 py-3 (16px × 12px)",
+      "buttonPadding": "px-6 py-3 (24px × 12px)"
+    }
+  },
+
+  "components": {
+    "navbar": {
+      "description": "固定顶部导航栏，深色半透明背景，与 Hero 融为一体",
+      "tailwindClasses": "fixed top-0 w-full z-50 bg-[#0B1829]/90 backdrop-blur-md border-b border-white/5",
+      "height": "h-16 lg:h-20",
+      "logo": {
+        "style": "text-white font-serif text-xl font-bold",
+        "note": "'Building' 文字 Logo，白色衬线体"
+      },
+      "links": {
+        "style": "text-white/80 hover:text-white text-[15px] font-medium transition-colors duration-200",
+        "activeStyle": "text-orange-500 font-semibold"
+      },
+      "layout": "flex items-center justify-between px-6 lg:px-12 max-w-7xl mx-auto"
+    },
+
+    "buttons": {
+      "primary": {
+        "description": "主要行动按钮 — 实心橙色",
+        "tailwindClasses": "bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-6 py-3 rounded-sm transition-all duration-300 hover:shadow-[0_4px_14px_0_rgba(249,115,22,0.4)] active:scale-[0.98]",
+        "examples": ["Sign In", "Our Team", "Read More"]
+      },
+      "secondary": {
+        "description": "次要按钮 — 白色描边（暗背景上）",
+        "tailwindClasses": "bg-transparent border border-white/60 hover:border-white hover:bg-white/10 text-white text-sm font-semibold px-6 py-3 rounded-sm transition-all duration-300",
+        "examples": ["Sign Up"]
+      },
+      "ghost": {
+        "description": "幽灵按钮 — 无背景无边框",
+        "tailwindClasses": "bg-transparent hover:bg-white/5 text-white/80 hover:text-white text-sm font-medium px-4 py-2 rounded-sm transition-all duration-200"
+      },
+      "link": {
+        "description": "链接样式按钮 — 带下划线或箭头",
+        "tailwindClasses": "text-orange-500 hover:text-orange-400 text-sm font-semibold underline underline-offset-4 decoration-orange-500/40 hover:decoration-orange-400 transition-all duration-200"
+      },
+      "sizes": {
+        "sm": "text-xs px-4 py-2",
+        "md": "text-sm px-6 py-3",
+        "lg": "text-base px-8 py-4"
+      }
+    },
+
+    "cards": {
+      "serviceCard": {
+        "description": "服务卡片 — 深色背景，居中图标 + 标题 + 描述",
+        "tailwindClasses": "bg-[#0B1829] border border-[#D4A843]/20 hover:border-[#D4A843]/50 rounded-md p-8 text-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,168,67,0.1)] group",
+        "icon": "w-14 h-14 mx-auto mb-4 text-orange-500 group-hover:text-orange-400 transition-colors bg-[#0B1829] border-2 border-[#D4A843]/30 rounded-lg p-3",
+        "title": "text-white text-lg font-bold mb-2",
+        "body": "text-white/60 text-sm leading-relaxed"
+      },
+      "projectCard": {
+        "description": "项目展示卡片 — 全图背景，底部渐变遮罩 + 文字",
+        "tailwindClasses": "relative overflow-hidden rounded-lg group cursor-pointer aspect-[4/3]",
+        "image": "w-full h-full object-cover transition-transform duration-500 group-hover:scale-110",
+        "overlay": "absolute inset-0 bg-gradient-to-t from-[#0B1829] via-[#0B1829]/30 to-transparent",
+        "titleArea": "absolute bottom-0 left-0 right-0 p-6",
+        "title": "text-white text-xl font-bold"
+      },
+      "valueCard": {
+        "description": "价值主张卡片 — 左图右文或右图左文的交替布局",
+        "tailwindClasses": "grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center",
+        "image": "rounded-lg overflow-hidden shadow-lg",
+        "content": "space-y-4",
+        "badge": "inline-block bg-orange-500/10 text-orange-500 text-sm font-semibold px-3 py-1 rounded-sm",
+        "title": "text-2xl font-bold text-[#0B1829]",
+        "body": "text-neutral-600 text-base leading-relaxed",
+        "cta": "text-orange-500 font-semibold text-sm"
+      }
+    },
+
+    "inputs": {
+      "default": {
+        "description": "标准输入框",
+        "tailwindClasses": "w-full bg-white border border-neutral-300 text-neutral-900 placeholder-neutral-400 text-sm px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all duration-200"
+      },
+      "onDark": {
+        "description": "深色背景上的输入框",
+        "tailwindClasses": "w-full bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all duration-200 backdrop-blur-sm"
+      },
+      "textarea": {
+        "tailwindClasses": "w-full bg-white border border-neutral-300 text-neutral-900 placeholder-neutral-400 text-sm px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all duration-200 resize-none min-h-[120px]"
+      },
+      "label": {
+        "tailwindClasses": "text-sm font-semibold text-neutral-800 mb-1.5 block"
+      },
+      "labelOnDark": {
+        "tailwindClasses": "text-sm font-semibold text-white/90 mb-1.5 block"
+      }
+    },
+
+    "sectionHeading": {
+      "description": "章节标题 — 'Our' 普通字重 + 关键词用橙色背景高亮",
+      "example": "Our <span class='bg-orange-500 text-white px-2 py-0.5 rounded-[2px]'>Services</span>",
+      "container": "text-center mb-12 lg:mb-16",
+      "titleBase": "text-3xl lg:text-4xl font-bold text-[#0B1829]",
+      "highlight": "bg-orange-500 text-white px-2 py-0.5 rounded-[2px] inline-block",
+      "subtitle": "text-neutral-500 text-lg mt-4 max-w-2xl mx-auto"
+    },
+
+    "footer": {
+      "description": "多列深色底部导航，包含 Logo、链接列表、Newsletter 订阅",
+      "tailwindClasses": "bg-[#080F1C] text-white/70 pt-16 pb-8",
+      "gridLayout": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12",
+      "columnTitle": "text-white font-bold text-lg mb-4",
+      "link": "text-white/50 hover:text-orange-500 text-sm transition-colors duration-200 block py-1",
+      "divider": "border-t border-white/10 mt-12 pt-6",
+      "copyright": "text-white/30 text-sm text-center",
+      "socialIcons": "flex gap-4 text-white/50 hover:[&>*]:text-orange-500 transition-colors"
+    },
+
+    "clientLogos": {
+      "description": "客户 Logo 展示区 — 灰度滤镜 + hover 还原彩色",
+      "container": "flex flex-wrap items-center justify-center gap-8 lg:gap-12",
+      "logoItem": "grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-10 lg:h-12 object-contain"
+    },
+
+    "ctaSection": {
+      "description": "行动号召区域 — 深色背景 + 表单",
+      "tailwindClasses": "relative bg-[#0B1829] py-16 lg:py-24 overflow-hidden",
+      "backgroundImage": "absolute inset-0 object-cover opacity-20",
+      "overlay": "absolute inset-0 bg-[#0B1829]/80",
+      "title": "text-white text-3xl lg:text-4xl font-bold text-center mb-8",
+      "form": "max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4"
+    },
+
+    "hero": {
+      "description": "全屏 Hero 区域 — 大图背景 + 渐变遮罩 + 大号标题 + CTA 按钮",
+      "tailwindClasses": "relative min-h-screen flex items-center",
+      "backgroundImage": "absolute inset-0 w-full h-full object-cover",
+      "overlay": "absolute inset-0 bg-gradient-to-r from-[#0B1829]/95 via-[#0B1829]/70 to-[#0B1829]/30",
+      "content": "relative z-10 max-w-3xl px-6 lg:px-16",
+      "title": "text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold uppercase tracking-wide leading-[1.1] font-serif",
+      "cta": "mt-8 inline-flex"
+    }
+  },
+
+  "animations": {
+    "durations": {
+      "instant": "75ms",
+      "fast": "150ms",
+      "normal": "300ms",
+      "slow": "500ms",
+      "slower": "700ms",
+      "imageZoom": "500ms"
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1) — ease-in-out 变体",
+      "easeOut": "cubic-bezier(0, 0, 0.2, 1)",
+      "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+      "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "tailwind": "transition-all duration-300 ease-in-out"
+    },
+    "interactions": {
+      "buttonHover": {
+        "effect": "background-color 渐变 + box-shadow 橙色光晕",
+        "tailwind": "transition-all duration-300 hover:shadow-[0_4px_14px_0_rgba(249,115,22,0.4)]"
+      },
+      "buttonPress": {
+        "effect": "轻微缩小",
+        "tailwind": "active:scale-[0.98] transition-transform"
+      },
+      "cardHover": {
+        "effect": "边框颜色增亮 + 微妙阴影扩散",
+        "tailwind": "transition-all duration-300 hover:border-[#D4A843]/50 hover:shadow-lg"
+      },
+      "imageHover": {
+        "effect": "图片放大 1.1 倍（项目卡片）",
+        "tailwind": "transition-transform duration-500 group-hover:scale-110"
+      },
+      "linkHover": {
+        "effect": "颜色变为橙色",
+        "tailwind": "transition-colors duration-200 hover:text-orange-500"
+      },
+      "logoHover": {
+        "effect": "从灰度变为彩色，透明度提升",
+        "tailwind": "grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+      },
+      "scrollReveal": {
+        "effect": "向上淡入 — 建议使用 Intersection Observer",
+        "initialState": "opacity-0 translate-y-8",
+        "animatedState": "opacity-100 translate-y-0",
+        "tailwind": "transition-all duration-700 ease-out"
+      },
+      "navScrolled": {
+        "effect": "导航栏滚动后增强背景不透明度 + 阴影",
+        "before": "bg-transparent",
+        "after": "bg-[#0B1829]/95 backdrop-blur-md shadow-lg"
+      }
+    }
+  },
+
+  "effects": {
+    "backdropBlur": {
+      "navbar": "backdrop-blur-md (12px)",
+      "modalOverlay": "backdrop-blur-sm (4px)",
+      "glassCard": "backdrop-blur-lg (16px) bg-white/5 border border-white/10"
+    },
+    "borders": {
+      "subtle": "border border-white/5 — 深色背景上的微妙分割线",
+      "light": "border border-neutral-200 — 浅色背景上的边框",
+      "accent": "border border-[#D4A843]/20 — 金色调装饰边框（服务卡片）",
+      "accentHover": "hover:border-[#D4A843]/50 — hover 加强",
+      "focus": "ring-2 ring-orange-500/50 border-orange-500 — 表单聚焦",
+      "divider": "border-t border-white/10 — Footer 分割线"
+    },
+    "overlays": {
+      "imageOverlay": "使用 position absolute 的渐变叠加层遮盖背景图",
+      "darkOverlay": "bg-black/50 用于模态框背景暗化",
+      "heroPattern": "可选：subtle dot/grid pattern overlay 增加质感"
+    },
+    "premiumDetails": {
+      "highlightedText": "关键词使用 inline bg-orange-500 text-white px-2 py-0.5 rounded-[2px]，这是全站最核心的设计特征",
+      "goldAccentBorder": "服务卡片使用极淡的金色边框 border-[#D4A843]/20 传达质感",
+      "imageHoverZoom": "项目卡片 hover 时图片 scale-110 创造交互活力",
+      "uppercaseHero": "Hero 标题全大写 + 粗衬线体 = 行业权威感",
+      "sectionAlternation": "深色/浅色 section 交替排列创造节奏感",
+      "subtleGrain": "可选：在深色区域叠加 noise texture 增加质感层次",
+      "iconStyle": "图标使用线条风格(outlined/stroke)，配合橙色和金色边框容器"
+    }
+  },
+
+  "layout": {
+    "maxWidth": "max-w-7xl (1280px)",
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "grid": {
+      "services": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
+      "projects": "grid grid-cols-1 md:grid-cols-3 gap-6",
+      "valueProps": "单行双列交替布局 grid grid-cols-1 md:grid-cols-2",
+      "footer": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8",
+      "formFields": "grid grid-cols-1 md:grid-cols-2 gap-4"
+    },
+    "container": "max-w-7xl mx-auto px-4 md:px-8 lg:px-16"
+  },
+
+  "tailwindConfig": {
+    "description": "建议添加到 tailwind.config.js 的自定义主题扩展",
+    "extend": {
+      "colors": {
+        "navy": {
+          "50": "#F0F4FF",
+          "100": "#E0E8F5",
+          "200": "#B8C9E8",
+          "300": "#7A95C4",
+          "400": "#4A6899",
+          "500": "#1E3A6E",
+          "600": "#152D5B",
+          "700": "#0F2148",
+          "800": "#0B1829",
+          "900": "#080F1C",
+          "950": "#050A14"
+        },
+        "brand-orange": {
+          "50": "#FFF7ED",
+          "100": "#FFEDD5",
+          "200": "#FED7AA",
+          "300": "#FDBA74",
+          "400": "#FB923C",
+          "500": "#F97316",
+          "600": "#EA580C",
+          "700": "#C2410C",
+          "800": "#9A3412",
+          "900": "#7C2D12"
+        },
+        "brand-gold": "#D4A843"
+      },
+      "fontFamily": {
+        "heading": ["DM Serif Display", "Playfair Display", "Georgia", "serif"],
+        "body": ["Inter", "Open Sans", "system-ui", "sans-serif"],
+        "accent": ["Poppins", "Montserrat", "sans-serif"]
+      },
+      "boxShadow": {
+        "orange-glow": "0 4px 14px 0 rgba(249, 115, 22, 0.3)",
+        "orange-glow-lg": "0 8px 25px 0 rgba(249, 115, 22, 0.4)",
+        "card-dark": "0 4px 20px 0 rgba(0, 0, 0, 0.4)",
+        "gold-border": "0 0 0 1px rgba(212, 168, 67, 0.2)"
+      },
+      "backgroundImage": {
+        "hero-gradient": "linear-gradient(to right, rgba(11,24,41,0.95), rgba(11,24,41,0.70), rgba(11,24,41,0.30))",
+        "card-gradient": "linear-gradient(to top, rgba(11,24,41,0.9), rgba(11,24,41,0.4), transparent)",
+        "cta-gradient": "linear-gradient(to right, #0B1829, #152D5B)"
+      }
+    }
+  }
+}
